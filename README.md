@@ -69,6 +69,7 @@ failure paths
 
 5) Parallel State: Credit check + Fraud detection
 Step Functions runs two branches at the same time.
+
 Branch A: Credit Check (heavy compute)
 Credit Check → ECS/Fargate or EC2 (or Lambda if light)
 Because credit check can be heavier / longer-running, you might run it on:
@@ -132,6 +133,7 @@ So ops team knows immediately.
 
 9) How user gets final status
 Two common patterns:
+
 Option A: Polling (simple)
 Client calls:
 GET /loan-applications/{applicationId}
